@@ -1,233 +1,149 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Abdullah Kapadia - Python, C++, PHP Developer | Building Practical Tech Solutions">
-    <meta name="author" content="Abdullah Kapadia">
-    <title>Abdullah Kapadia - Software Developer</title>
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abdullah Kapadia | Full Stack Developer</title>
+  <meta name="description" content="Software Developer specializing in Python, C++, PHP, and mobile technologies.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
+  <!-- Background Orbit & Grid -->
+  <div class="fixed-bg">
+    <div class="bg-gradient"></div>
+  </div>
 
-    <!-- Header -->
-    <header class="ds-header" id="site-header">
-      <div class="container">
-        <div class="ds-header-inner">
-          <a href="index.html" class="ds-logo">
-            <span>A</span>Abdullah Kapadia
+  <!-- Bubble Menu Navigation -->
+  <nav class="bubble-menu">
+    <button class="theme-toggle" aria-label="Toggle theme">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+    <div class="menu-container">
+      <a href="#home" class="menu-item"><i class="fa-solid fa-house"></i> <span>Home</span></a>
+      <a href="#expertise" class="menu-item"><i class="fa-solid fa-network-wired"></i> <span>Expertise</span></a>
+      <a href="#experience" class="menu-item"><i class="fa-solid fa-terminal"></i> <span>Experience</span></a>
+      <a href="#projects" class="menu-item"><i class="fa-solid fa-briefcase"></i> <span>Projects</span></a>
+      <a href="#contact" class="menu-item"><i class="fa-solid fa-envelope"></i> <span>Contact</span></a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Home Section (Orbit) -->
+    <section id="home" class="hero-section">
+      <div class="hero-orbit-container">
+        <div class="orbit-ring ring-1"><div class="planet planet-1"><i class="fa-brands fa-python"></i></div></div>
+        <div class="orbit-ring ring-2"><div class="planet planet-2"><i class="fa-brands fa-php"></i></div><div class="planet planet-3"><i class="fa-solid fa-c"></i></div></div>
+        <div class="orbit-ring ring-3"><div class="planet planet-4"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter"></div><div class="planet planet-5"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart"></div><div class="planet planet-6"><i class="fa-brands fa-github"></i></div></div>
+      </div>
+      
+      <div class="hero-content">
+        <div class="badge fade-in-up">
+          <span class="pulse-dot"></span> AVAILABLE FOR WORK
+        </div>
+        <h1 class="hero-title fade-in-up delay-1">
+          Hello! I'm Abdullah Kapadia.<br>
+          A Creative <span class="text-muted">Software</span>
+        </h1>
+        <div class="hero-subtitle fade-in-up delay-2">DEVELOPER</div>
+        <p class="hero-description fade-in-up delay-3">
+          I build robust backend systems, cross-platform mobile apps, and scalable web solutions. Let's break the mold together.
+        </p>
+        <div class="hero-actions fade-in-up delay-4">
+          <a href="#contact" class="btn btn-primary">Initiate Contact</a>
+          <a href="assets/resume.pdf" target="_blank" class="btn btn-outline">
+            Download Core_Data.pdf <i class="fa-solid fa-download"></i>
           </a>
-          <ul class="ds-social">
-            <li><a href="assets/resume.pdf" target="_blank" title="Resume"><i class="fa-solid fa-file"></i></a></li>
-            <li><a href="https://github.com/abdullahkapadia" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/abdullah-kapadia23/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
-            <li><a href="https://leetcode.com/u/ABDULLAHK53/" target="_blank" title="LeetCode"><i class="fa-solid fa-code"></i></a></li>
-          </ul>
         </div>
       </div>
-    </header>
+    </section>
 
-    <!-- Banner -->
-    <div class="ds-banner">
+    <!-- Expertise Section: The Constellation -->
+    <section id="expertise" class="expertise-section section-padding">
+      <div class="container relative z-10">
+        <div class="section-header">
+          <div class="section-badge"><span></span> Neural Network</div>
+          <h2 class="section-title">The Skill<br>Constellation</h2>
+          <p class="section-desc">Interact with the nodes to see how my technologies connect to form robust architectures.</p>
+        </div>
+      </div>
+      <!-- Canvas for Interactive Constellation -->
+      <div class="canvas-container" style="flex: 1; position: relative; width: 100%; min-height: 400px; margin-top: 20px;">
+        <canvas id="constellation-canvas" class="constellation"></canvas>
+      </div>
+    </section>
+
+    <!-- Experience Section: The IDE -->
+    <section id="experience" class="ide-section section-padding">
       <div class="container">
-        <div class="ds-banner-grid">
-          <div class="ds-banner-profile">
-            <img class="profile-img" src="assets/26659.webp" alt="Abdullah Kapadia">
-            <div class="profile-contact">
-              <div class="profile-contact-item">
-                <a href="mailto:akapadia975@gmail.com">
-                  <i class="fa-solid fa-envelope"></i> akapadia975@gmail.com
-                </a>
-              </div>
-              <div class="profile-contact-item">
-                <a href="https://github.com/abdullahkapadia" target="_blank">
-                  <i class="fa-brands fa-github"></i> GitHub
-                </a>
-              </div>
-              <div class="profile-contact-item">
-                <a href="https://www.linkedin.com/in/abdullah-kapadia23/" target="_blank">
-                  <i class="fa-brands fa-linkedin"></i> LinkedIn
-                </a>
-              </div>
-              <div class="profile-contact-item">
-                <a href="assets/resume.pdf" target="_blank">
-                  <i class="fa-solid fa-file"></i> Resume
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="ds-banner-content">
-            <section>
-              <h1>Abdullah Kapadia</h1>
-              <div class="intro">
-                I'm a Software Developer specializing in <strong>Python</strong>, <strong>C++</strong>, <strong>PHP</strong>, and <strong>Flutter</strong>, focused on building practical tech solutions.
-                <br><br>
-                I am an Information Technology student at G H Patel College of Engineering &amp; Technology (GCET).
-                I build reliable software and have experience with full-stack web development, mobile app development, and machine learning.
-                <br><br>
-                Recently, I developed <strong>MyGCET</strong>, a mobile app designed for GCET students to simplify attendance tracking and academic management.
-                <br><br>
-                I am looking for a developer role to apply my skills in building reliable systems. I have hands-on experience from internships at CSRBOX (Frontend) and Saifee Cyber (Python).
-              </div>
-            </section>
-          </div>
+        <div class="section-header text-center reveal-up">
+          <h2 class="section-title">Execution_Log.py</h2>
         </div>
-      </div>
-    </div>
-
-    <!-- Skills -->
-    <div id="skills" class="ds-section">
-      <div class="container">
-        <h2 class="ds-heading">Skills & Technologies</h2>
-        <div class="ds-list">
-          <div class="ds-item">
-            <div class="ds-title">
-              <span class="ds-title-name">Languages:</span>&nbsp;
-              Python, C++, PHP, Java, Dart
+        
+        <div class="ide-window reveal-up delay-1">
+          <div class="ide-header">
+            <div class="mac-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
             </div>
+            <div class="ide-title">experience_timeline.py — abdullah_portfolio</div>
           </div>
-          <div class="ds-item">
-            <div class="ds-title">
-              <span class="ds-title-name">Frameworks:</span>&nbsp;
-              Django, Flutter, Flask, Streamlit
+          <div class="ide-body">
+            <div class="line-numbers">
+              <!-- Dynamically filled by JS -->
             </div>
-          </div>
-          <div class="ds-item">
-            <div class="ds-title">
-              <span class="ds-title-name">Tools & Others:</span>&nbsp;
-              Git, Supabase, Machine Learning, Mobile Development
+            <div class="code-area">
+              <pre><code id="typing-code"></code><span class="cursor">|</span></pre>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Education -->
-    <div id="education" class="ds-section">
-      <div class="container">
-        <h2 class="ds-heading">Education</h2>
-        <div class="ds-list">
-          <div class="ds-item education-item">
-            <img class="education-img" src="assets/gcet-logo.jpg" alt="GCET">
-            <div class="education-text">
-              <div class="education-institution">G H Patel College of Engineering & Technology</div>
-              <div>B.Tech in Information Technology &nbsp;|&nbsp; Grade: 8.70</div>
-              <div class="ds-meta">Jul 2025 – Jul 2028</div>
-            </div>
+    <!-- Projects Section: Infinite Honeycomb -->
+    <section id="projects" class="projects-section section-padding">
+      <div class="container relative z-10">
+        <div class="section-header">
+          <div class="section-badge"><span></span> Projects</div>
+          <h2 class="section-title">Infinite<br>Grid</h2>
+          <p class="section-desc">Tap to explore the honeycomb network.</p>
+        </div>
+      </div>
+
+      <div class="canvas-container" style="position: relative; width: 100%; height: 65vh; min-height: 500px; margin-top: 20px; overflow: hidden;">
+        <canvas id="honeycomb-canvas" class="honeycomb"></canvas>
+      </div>
+    </section>
+
+    <!-- Contact Section: Command Center -->
+    <footer id="contact" class="footer section-padding">
+      <div class="container reveal-up">
+        <div class="cmd-center">
+          <div class="cmd-header">
+            SYSTEM // INITIATE_CONTACT.SH
           </div>
-          <div class="ds-item education-item">
-            <img class="education-img" src="assets/gpd-logo.png" alt="GPD">
-            <div class="education-text">
-              <div class="education-institution">Government Polytechnic, Dahod</div>
-              <div>Diploma in Computer Engineering &nbsp;|&nbsp; Grade: 9.32</div>
-              <div class="ds-meta">Sep 2022 – May 2025</div>
+          <div class="cmd-body text-center">
+            <h2 class="footer-title">Awaiting Protocol</h2>
+            <p class="footer-desc mb-8">Ready to execute new projects. Enter coordinates below.</p>
+            <div class="footer-socials mb-8">
+              <a href="mailto:akapadia975@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+              <a href="https://www.linkedin.com/in/abdullah-kapadia23/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://github.com/abdullahkapadia" target="_blank"><i class="fa-brands fa-github"></i></a>
+              <a href="https://leetcode.com/u/ABDULLAHK53/" target="_blank"><i class="fa-solid fa-code"></i></a>
             </div>
+            <a href="mailto:akapadia975@gmail.com" class="btn btn-primary pulse-btn">RUN: mailto:akapadia</a>
+            <p class="copyright mt-8">© 2026 Abdullah Kapadia. EOF.</p>
           </div>
         </div>
       </div>
-    </div>
+    </footer>
+  </main>
 
-    <!-- Experience -->
-    <div id="experience" class="ds-section">
-      <div class="container">
-        <h2 class="ds-heading">Experience</h2>
-        <div class="ds-list">
-          <div class="ds-item">
-            <div class="ds-title">
-              <span class="ds-title-name">Frontend Developer &nbsp;·&nbsp; CSRBOX</span>
-            </div>
-            <div class="ds-meta">Jun 2024 – Aug 2024 &nbsp;|&nbsp; Remote</div>
-            <div class="ds-desc">Worked as a Frontend Web Developer during a 3-month summer internship. Built responsive web interfaces and collaborated with development teams.</div>
-          </div>
-          <div class="ds-item">
-            <div class="ds-title">
-              <span class="ds-title-name">Python Developer &nbsp;·&nbsp; Saifee Cyber</span>
-            </div>
-            <div class="ds-meta">Aug 2023 &nbsp;|&nbsp; Remote, Godhra, Gujarat</div>
-            <div class="ds-desc">Developed Python-based solutions and gained practical experience in software development workflows.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Projects -->
-    <div id="projects" class="ds-section">
-      <div class="container">
-        <h2 class="ds-heading">Projects</h2>
-        <div class="ds-list">
-          <div class="ds-item">
-            <div class="ds-title">
-              <span class="ds-title-name">MyGCET</span>
-            </div>
-            <div class="ds-desc">A mobile app for GCET students to help with attendance tracking and academic management. Built with Flutter, Dart, and Supabase.</div>
-            <div class="project-links">
-              <a href="https://mygcetofficial53.github.io/mygcet/" target="_blank"><i class="fa-solid fa-link"></i> Live</a>
-            </div>
-          </div>
-          <div class="ds-item">
-            <div class="ds-title">
-              <span class="ds-title-name">AI Salary Prediction</span>
-            </div>
-            <div class="ds-desc">Machine learning app that predicts software developer salaries based on various factors. Built with Python, ML, and Streamlit.</div>
-            <div class="project-links">
-              <a href="https://github.com/abdullahkapadia/AI-Salary-Prediction" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-            </div>
-          </div>
-          <div class="ds-item">
-            <div class="ds-title">
-              <span class="ds-title-name">Text Analyzer</span>
-            </div>
-            <div class="ds-desc">Django web application for analyzing and transforming text in various ways.</div>
-            <div class="project-links">
-              <a href="https://github.com/abdullahkapadia/textutils" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-            </div>
-          </div>
-          <div class="ds-item">
-            <div class="ds-title">
-              <span class="ds-title-name">AlgoPro Tracker</span>
-            </div>
-            <div class="ds-desc">Track algorithm practice progress and improve coding skills systematically.</div>
-            <div class="project-links">
-              <a href="https://github.com/abdullahkapadia/-AlgoPro-Tracker" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-            </div>
-          </div>
-          <div class="ds-item">
-            <div class="ds-title">
-              <span class="ds-title-name">Password Manager</span>
-            </div>
-            <div class="ds-desc">Secure password management solution to keep credentials safe and organized.</div>
-            <div class="project-links">
-              <a href="https://github.com/abdullahkapadia/password-manger" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Contact -->
-    <div id="contact" class="ds-section">
-      <div class="container">
-        <h2 class="ds-heading">Contact</h2>
-        <div class="ds-list">
-          <div class="ds-item">
-            <div class="ds-desc">
-              Have a project in mind or want to collaborate? Feel free to reach out!
-            </div>
-            <div class="contact-links">
-              <a href="mailto:akapadia975@gmail.com"><i class="fa-solid fa-envelope"></i> akapadia975@gmail.com</a>
-              <a href="https://www.linkedin.com/in/abdullah-kapadia23/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-              <a href="https://github.com/abdullahkapadia" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script src="js/main.js"></script>
-  </body>
+  <script src="js/main.js"></script>
+</body>
 </html>

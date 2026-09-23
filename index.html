@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,393 +7,230 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Using Inter for that clean, sleek typography look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/styles.css?v=2.0">
 </head>
 <body>
-    <div class="glow-container">
-        
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <h1 class="hero-title">
-                I'm <span class="gradient-text">Abdullah Kapadia</span>,<br>
-                Software Developer
-            </h1>
+    <!-- The outer frame for the subtle glowing edge -->
+    <div class="viewport-frame"></div>
 
-            <div class="hero-center">
-                <!-- Left Details -->
-                <div class="hero-location">
-                    <span class="icon">✱</span>
-                    <div class="loc-text">
-                        <strong>Gujarat</strong>
-                        <span>India</span>
-                    </div>
-                </div>
-
-                <!-- Arch Profile -->
-                <div class="profile-container">
-                    <div class="decorative-dots dots-left"></div>
-                    <div class="decorative-dots dots-right"></div>
-                    <div class="star-icon star-top-right">✦</div>
-                    <div class="star-icon star-bottom-center">✦</div>
-                    <div class="star-icon star-left">✦</div>
-                    
-                    <div class="profile-arch">
-                        <img src="https://ui-avatars.com/api/?name=Abdullah+Kapadia&background=A8C4D6&color=fff&size=400" alt="Abdullah Kapadia">
-                    </div>
-                </div>
-
-                <!-- Right Quote -->
-                <div class="hero-quote">
-                    <i class="fa-solid fa-quote-left"></i>
-                    <p>Seeking <span class="highlight">recognition</span> through<br>my <span class="highlight">efforts</span> and <span class="highlight">transforming</span><br><span class="highlight">lives</span> through my <span class="highlight">skills.</span></p>
-                </div>
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebar">
+        <div class="sidebar-content">
+            <button class="close-btn" id="closeSidebar" aria-label="Close menu">&times;</button>
+            <nav class="sidebar-nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About Me</a>
+                <a href="#experience" class="nav-link">Work Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="themeToggle" aria-label="Toggle Theme"><i class="fa-solid fa-sun"></i></button>
+                <a href="https://github.com/abdullahkapadia" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/abdullah-kapadia23/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#terminal" class="nav-link icon-link" aria-label="Terminal"><i class="fa-solid fa-terminal"></i></a>
             </div>
+        </div>
+    </div>
 
-            <div class="hero-actions">
-                <a href="#" class="btn btn-outline">Download Resume</a>
-                <a href="https://www.linkedin.com/in/abdullah-kapadia23/" target="_blank" class="btn btn-gradient">Linkedin</a>
-            </div>
-            
-            <div class="scroll-down-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+    <!-- Main Viewport -->
+    <main class="main-container">
+        <!-- Hamburger Trigger -->
+        <button class="menu-trigger" id="openSidebar" aria-label="Open menu">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </button>
+
+        <!-- SECTIONS -->
+        <!-- Home Section -->
+        <section id="home" class="page-section active">
+            <div class="hero-content">
+                <h1 class="hero-greeting" id="greetingText">Hello.</h1>
+                <p class="hero-subtext">My name is Abdullah Kapadia. I'm a Software Developer, based in India.</p>
             </div>
         </section>
 
-        <!-- Toolbox Section -->
-        <section id="toolbox" class="toolbox-section">
-            <h2 class="section-title">Take a look at my <span class="gradient-text">Toolbox</span></h2>
-            <p class="section-subtitle">My go-to tools of the trade — the ones I use regularly<br>and am constantly refining.</p>
-
-            <!-- Decorative shapes -->
-            <div class="decorative-float shape-coin"></div>
-            <div class="decorative-float shape-burst-blue"></div>
-            <div class="decorative-float shape-burst-purple"></div>
-            <div class="decorative-float shape-burst-orange"></div>
-            <div class="decorative-float shape-pill"></div>
-            <div class="decorative-float shape-x">✖</div>
-
-            <div class="toolbox-filters">
-                <button class="filter-btn active" data-filter="all">Langs & Fullstack</button>
-                <button class="filter-btn" data-filter="data">Data & AI</button>
-                <button class="filter-btn" data-filter="cloud">Cloud & DevOps</button>
-                <button class="filter-btn" data-filter="tools">Tools & Methods</button>
+        <!-- About Section -->
+        <section id="about" class="page-section">
+            <div class="content-wrapper">
+                <h2 class="section-title">About Me</h2>
+                <div class="text-content">
+                    <p>I'm a passionate Software Developer pursuing a B.Tech in Information Technology at GCET. I specialize in backend architecture, networking protocols, and building robust web applications.</p>
+                    <p>I focus on writing clean, concurrent, and efficient code, often leveraging languages like Go, Python, and JavaScript to solve complex problems.</p>
+                    <p>When I'm not coding, I'm exploring machine learning concepts, optimizing data processing pipelines, or learning about low-level system design.</p>
+                </div>
+                
+                <!-- Live Coding Stats -->
+                <div class="stats-container">
+                    <h3 class="stats-title">Live Coding Stats</h3>
+                    <div class="stats-grid">
+                        <img src="https://github-readme-stats.vercel.app/api?username=abdullahkapadia&show_icons=true&theme=transparent&hide_border=true&title_color=4287f5&text_color=333333&icon_color=4287f5" alt="GitHub Stats" class="github-stats-img" />
+                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=abdullahkapadia&layout=compact&theme=transparent&hide_border=true&title_color=4287f5&text_color=333333" alt="Top Languages" class="github-stats-img" />
+                    </div>
+                    <div class="contribution-graph">
+                        <p class="graph-label">Contributions (Last Year)</p>
+                        <img src="https://ghchart.rshah.org/4287f5/abdullahkapadia" alt="GitHub Contributions" class="github-stats-img" />
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="toolbox-search">
-                <i class="fa-solid fa-search"></i>
-                <input type="text" id="techSearch" placeholder="Buscar tecnologia...">
-            </div>
-
-            <div class="tech-grid">
-                <!-- Data & AI / Langs -->
-                <div class="tech-pill" data-category="langs data">
-                    <i class="fa-brands fa-python" style="color: #3776AB;"></i>
-                    <span>Python</span>
-                </div>
-                <!-- Langs -->
-                <div class="tech-pill" data-category="langs">
-                    <i class="fa-brands fa-js" style="color: #F7DF1E;"></i>
-                    <span>JavaScript</span>
-                </div>
-                <div class="tech-pill" data-category="langs">
-                    <span class="custom-icon" style="color: #0175C2; font-weight: bold; font-family: monospace;">D</span>
-                    <span>Dart</span>
-                </div>
-                <div class="tech-pill" data-category="langs">
-                    <span class="custom-icon" style="color: #00599C; font-weight: bold; font-family: monospace;">C++</span>
-                    <span>C++</span>
-                </div>
-                <!-- Fullstack -->
-                <div class="tech-pill" data-category="langs">
-                    <i class="fa-brands fa-react" style="color: #61DAFB;"></i>
-                    <span>React</span>
-                </div>
-                <div class="tech-pill" data-category="langs">
-                    <span class="custom-icon" style="color: #02569B; font-weight: bold; font-family: monospace;">F</span>
-                    <span>Flutter</span>
-                </div>
-                <div class="tech-pill" data-category="langs">
-                    <span class="custom-icon" style="color: #092E20; font-weight: bold; font-family: monospace;">dj</span>
-                    <span>Django</span>
-                </div>
-                <!-- Data & AI -->
-                <div class="tech-pill" data-category="data">
-                    <i class="fa-solid fa-robot" style="color: #FF6F00;"></i>
-                    <span>Machine Learning</span>
+        <!-- Experience Section -->
+        <section id="experience" class="page-section">
+            <div class="content-wrapper">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="accordion">
+                    <!-- Exp 1 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Frontend Dev - CSRBOX (2024)</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Engineered modern, responsive web interfaces utilizing React and JavaScript. Collaborated with design and backend teams to deliver high-performance user experiences.</p>
+                        </div>
+                    </div>
+                    <!-- Exp 2 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Python Developer - Saifee Cyber (2023)</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Spearheaded the development of complex backend scripts, automated critical internal workflows, and optimized data processing pipelines using Python.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="projects-section">
-            <h2 class="section-title">Selected <span class="gradient-text">Projects</span></h2>
-            <p class="section-subtitle">A collection of my recent work, built with modern technologies.</p>
-
-            <div class="server-rack">
-                
-                <!-- Blade 1: Auth Service -->
-                <div class="server-blade">
-                    <div class="blade-front">
-                        <span class="blade-label">1U-AUTH</span>
-                        <div class="led-array">
-                            <div class="led led-green blink-fast"></div>
-                            <div class="led led-green blink-slow"></div>
-                            <div class="led led-blue"></div>
+        <section id="projects" class="page-section">
+            <div class="content-wrapper">
+                <h2 class="section-title">Projects</h2>
+                <div class="accordion">
+                    <!-- Proj 1 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>High-Throughput Event Streaming & Rate Limiter Engine</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Built a Go event streaming and rate-limiting engine via Kafka and Redis. Implemented concurrent consumers, backpressure, DLQs, and Lua-based atomic limits. Added Prometheus metrics, graceful shutdown, and p95/p99 benchmarks.</p>
+                            <a href="https://github.com/abdullahkapadia/High-Throughput-Event-Streaming-And-Rate-Limiter-Engine" target="_blank" class="text-link">View Source &rarr;</a>
                         </div>
                     </div>
-                    <div class="blade-top">
-                        <div class="blade-content">
-                            <h3>Auth-Service (Microservice)</h3>
-                            <p>A reusable authentication microservice with REST APIs for user registration, JWT login, and profile retrieval.</p>
-                            <div class="project-tags">
-                                <span>Go</span>
-                                <span>JWT</span>
-                                <span>REST</span>
-                            </div>
-                            <a href="https://github.com/abdullahkapadia/Auth-Service" target="_blank" class="btn btn-outline btn-small">View Source</a>
+                    <!-- Proj 2 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Auth-Service (Microservice)</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>A reusable authentication microservice with REST APIs for user registration, JWT login, and profile retrieval built in Go.</p>
+                            <a href="https://github.com/abdullahkapadia/Auth-Service" target="_blank" class="text-link">View Source &rarr;</a>
                         </div>
                     </div>
-                </div>
-
-                <!-- Blade 2: TCP Chat -->
-                <div class="server-blade">
-                    <div class="blade-front">
-                        <span class="blade-label">1U-TCP-CHAT</span>
-                        <div class="led-array">
-                            <div class="led led-green blink-slow"></div>
-                            <div class="led led-blue blink-fast"></div>
-                            <div class="led led-orange blink-random"></div>
+                    <!-- Proj 3 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Multi-Client TCP Chat Server</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Concurrent multi-client TCP chat server built using goroutines, channels, and an event-driven client manager in Go.</p>
+                            <a href="https://github.com/abdullahkapadia/go-multiclient-chat-server" target="_blank" class="text-link">View Source &rarr;</a>
                         </div>
                     </div>
-                    <div class="blade-top">
-                        <div class="blade-content">
-                            <h3>Multi-Client TCP Chat</h3>
-                            <p>Concurrent multi-client TCP chat server built using goroutines, channels, and an event-driven client manager.</p>
-                            <div class="project-tags">
-                                <span>Go</span>
-                                <span>TCP Sockets</span>
-                                <span>Concurrency</span>
-                            </div>
-                            <a href="https://github.com/abdullahkapadia/go-multiclient-chat-server" target="_blank" class="btn btn-outline btn-small">View Source</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Blade 3: UDP Audio -->
-                <div class="server-blade">
-                    <div class="blade-front">
-                        <span class="blade-label">1U-UDP-AUDIO</span>
-                        <div class="led-array">
-                            <div class="led led-blue blink-fast"></div>
-                            <div class="led led-green blink-fast"></div>
-                            <div class="led led-orange"></div>
-                        </div>
-                    </div>
-                    <div class="blade-top">
-                        <div class="blade-content">
-                            <h3>Real-Time UDP Audio</h3>
+                    <!-- Proj 4 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Real-Time UDP Audio Streaming</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="accordion-content">
                             <p>A low-latency audio chatting server engineered with Go's UDP package for blazing-fast real-time streaming.</p>
-                            <div class="project-tags">
-                                <span>Go</span>
-                                <span>UDP</span>
-                                <span>Real-Time</span>
-                            </div>
-                            <a href="https://github.com/abdullahkapadia/ReAL-TiMe-AuDiO-ChAtTing-Udp" target="_blank" class="btn btn-outline btn-small">View Source</a>
+                            <a href="https://github.com/abdullahkapadia/ReAL-TiMe-AuDiO-ChAtTing-Udp" target="_blank" class="text-link">View Source &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Proj 5 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>AI Price Negotiator Platform</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>A multi-vendor e-commerce platform featuring a custom-built Random Forest ML engine (Python) and PHP backend for real-time price negotiation.</p>
+                            <a href="https://github.com/abdullahkapadia/AI-PRICE-Negotiator" target="_blank" class="text-link">View Source &rarr;</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Blade 4: AI Negotiator -->
-                <div class="server-blade">
-                    <div class="blade-front">
-                        <span class="blade-label">2U-AI-PRICER</span>
-                        <div class="led-array">
-                            <div class="led led-green blink-slow"></div>
-                            <div class="led led-orange blink-fast"></div>
-                            <div class="led led-red blink-random"></div>
-                        </div>
-                    </div>
-                    <div class="blade-top">
-                        <div class="blade-content">
-                            <h3>AI Price Negotiator</h3>
-                            <p>A multi-vendor e-commerce platform featuring a custom-built Random Forest ML engine for real-time price negotiation.</p>
-                            <div class="project-tags">
-                                <span>PHP</span>
-                                <span>Python</span>
-                                <span>Machine Learning</span>
-                            </div>
-                            <a href="https://github.com/abdullahkapadia/AI-PRICE-Negotiator" target="_blank" class="btn btn-outline btn-small">View Source</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Blade 5: Event Streamer -->
-                <div class="server-blade">
-                    <div class="blade-front">
-                        <span class="blade-label">2U-STREAMER</span>
-                        <div class="led-array">
-                            <div class="led led-blue blink-fast"></div>
-                            <div class="led led-green blink-slow"></div>
-                            <div class="led led-blue blink-random"></div>
-                        </div>
-                    </div>
-                    <div class="blade-top">
-                        <div class="blade-content">
-                            <h3>Event Streaming & Rate Limiter</h3>
-                            <p>A high-throughput Go engine using Kafka and Redis. Features concurrent consumers, backpressure, DLQs, and Lua-based atomic limits.</p>
-                            <div class="project-tags">
-                                <span>Go</span>
-                                <span>Kafka</span>
-                                <span>Redis</span>
-                            </div>
-                            <a href="https://github.com/abdullahkapadia/High-Throughput-Event-Streaming-And-Rate-Limiter-Engine" target="_blank" class="btn btn-outline btn-small">View Source</a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
 
-        <!-- Experience Section (Ultimate Subway Map) -->
-        <section id="experience" class="experience-section">
-            <h2 class="section-title">My <span class="gradient-text">Journey</span></h2>
-            <p class="section-subtitle">Scroll down the tracks. Watch the journey unfold.</p>
-
-            <!-- 3D Scene Container -->
-            <div class="subway-scene" id="subwayScene">
-                
-                <!-- The SVG Train Wrapper -->
-                <div class="svg-train-wrapper" id="scrollTrain">
-                    <svg viewBox="0 0 100 50" class="svg-train-graphic">
-                        <!-- Simple sleek train graphic top-down -->
-                        <!-- Base -->
-                        <rect x="10" y="15" width="80" height="20" rx="10" fill="#FAFAFA" stroke="#1A1A1A" stroke-width="2"/>
-                        <!-- Windows -->
-                        <rect x="30" y="19" width="15" height="12" rx="2" fill="#1A1A1A"/>
-                        <rect x="55" y="19" width="15" height="12" rx="2" fill="#1A1A1A"/>
-                        <!-- Front Engine (Right side) -->
-                        <path d="M 80 15 Q 95 25 80 35 Z" fill="#FF8C00" stroke="#1A1A1A" stroke-width="2"/>
-                    </svg>
-                    <!-- Particle exhaust container -->
-                    <div class="exhaust" id="trainExhaust"></div>
-                </div>
-
-                <!-- SVG Tracks -->
-                <svg class="subway-svg" viewBox="0 0 800 800" preserveAspectRatio="none">
-                    <defs>
-                        <linearGradient id="workLine" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stop-color="#FF8C00"/>
-                            <stop offset="100%" stop-color="#FF512F"/>
-                        </linearGradient>
-                        <linearGradient id="eduLine" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stop-color="#B265FF"/>
-                            <stop offset="100%" stop-color="#7B2CBF"/>
-                        </linearGradient>
-                    </defs>
-
-                    <!-- City Environment (Static SVG background) -->
-                    <g class="city-environment">
-                        <!-- Building block 1 (Top Left) -->
-                        <path d="M 50 100 L 120 100 L 120 160 L 50 160 Z" fill="rgba(255,255,255,0.05)" stroke="#E0E0E0" stroke-width="2"/>
-                        <path d="M 60 110 L 110 110 L 110 150 L 60 150 Z" fill="rgba(255,255,255,0.1)"/>
-                        
-                        <!-- Building block 2 (Middle Right) -->
-                        <path d="M 650 350 L 750 350 L 750 480 L 650 480 Z" fill="rgba(255,255,255,0.05)" stroke="#E0E0E0" stroke-width="2"/>
-                        <path d="M 665 365 L 735 365 L 735 465 L 665 465 Z" fill="rgba(255,255,255,0.1)"/>
-
-                        <!-- Park/Greenery (Bottom Left) -->
-                        <circle cx="200" cy="650" r="50" fill="rgba(178, 101, 255, 0.05)" stroke="rgba(178, 101, 255, 0.2)" stroke-width="2"/>
-                        <circle cx="260" cy="700" r="40" fill="rgba(178, 101, 255, 0.05)" stroke="rgba(178, 101, 255, 0.2)" stroke-width="2"/>
-                    </g>
-                    
-                    <!-- Education Line (Purple) -->
-                    <!-- M = Move to, C = Cubic Bezier Curve (control point 1, control point 2, end point) -->
-                    <path class="track track-bg" d="M 200,0 L 200,300 C 200,450 400,350 400,500 L 400,800" />
-                    <path class="track edu-track" id="eduPath" d="M 200,0 L 200,300 C 200,450 400,350 400,500 L 400,800" />
-                    
-                    <!-- Work Line (Orange) -->
-                    <path class="track track-bg" d="M 600,0 L 600,300 C 600,450 400,350 400,500 L 400,800" />
-                    <path class="track work-track" id="workPath" d="M 600,0 L 600,300 C 600,450 400,350 400,500 L 400,800" />
-                </svg>
-
-                <!-- Nodes -->
-                <!-- Edu 2022 -->
-                <div class="subway-node edu-node" style="left: 25%; top: 15%;">
-                    <div class="station-building"></div>
-                    <div class="node-label">2022</div>
-                    <div class="auto-billboard">
-                        <span class="billboard-date">2022 - 2025</span>
-                        <h3>Diploma in Engineering</h3>
-                        <h4>Government Polytechnic</h4>
-                        <p>Studied foundational software engineering principles, data structures, and practical applications in low-level programming and system architecture.</p>
+        <!-- Skills Section -->
+        <section id="skills" class="page-section">
+            <div class="content-wrapper">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <p>Go, Python, JavaScript, C++, Dart, PHP</p>
                     </div>
-                </div>
-
-                <!-- Work 2023 -->
-                <div class="subway-node work-node" style="left: 75%; top: 30%;">
-                    <div class="station-building"></div>
-                    <div class="node-label">2023</div>
-                    <div class="auto-billboard">
-                        <span class="billboard-date">2023</span>
-                        <h3>Python Developer</h3>
-                        <h4>Saifee Cyber</h4>
-                        <p>Spearheaded the development of complex backend scripts, automated critical internal workflows, and optimized data processing pipelines using Python.</p>
+                    <div class="skill-category">
+                        <h3>Frameworks & Libraries</h3>
+                        <p>React, Flutter, Django</p>
                     </div>
-                </div>
-
-                <!-- Intersection (Both) 2024 -->
-                <div class="subway-node mix-node" style="left: 50%; top: 50%;">
-                    <div class="station-building"></div>
-                    <div class="node-label">2024</div>
-                    <div class="auto-billboard">
-                        <span class="billboard-date">2024</span>
-                        <h3>Frontend Dev & B.Tech Start</h3>
-                        <h4>CSRBOX & GCET</h4>
-                        <p>Engineered modern, responsive web interfaces at CSRBOX utilizing React and JavaScript. Simultaneously commenced advanced studies in Information Technology at GCET, focusing on distributed systems.</p>
+                    <div class="skill-category">
+                        <h3>Tools & Technologies</h3>
+                        <p>Kafka, Redis, Docker, Git, TCP/UDP Networking</p>
                     </div>
-                </div>
-
-                <!-- End (Current) 2028 -->
-                <div class="subway-node edu-node" style="left: 50%; top: 80%;">
-                    <div class="station-building"></div>
-                    <div class="node-label">2028</div>
-                    <div class="auto-billboard">
-                        <span class="billboard-date">2025 - 2028</span>
-                        <h3>B.Tech IT Graduation</h3>
-                        <h4>GCET</h4>
-                        <p>Currently completing a rigorous B.Tech program in Information Technology, specializing in backend architecture, networking protocols (TCP/UDP), and machine learning applications.</p>
+                    <div class="skill-category">
+                        <h3>Concepts</h3>
+                        <p>Microservices, Concurrency, Machine Learning, Data Structures</p>
                     </div>
                 </div>
             </div>
-    </section>
+        </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
-            <p class="section-subtitle">
-                I'm currently open to new opportunities.<br>Whether you have a question or just want to say hi, I'll try my best to get back to you!
-            </p>
-            
-            <div class="contact-actions">
-                <a href="mailto:akapadia975@gmail.com" class="btn btn-gradient btn-large">Say Hello</a>
-            </div>
-            
-            <div class="social-links">
-                <a href="https://github.com/abdullahkapadia" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/abdullah-kapadia23/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <section id="contact" class="page-section">
+            <div class="content-wrapper">
+                <h2 class="section-title">Contact</h2>
+                <div class="text-content">
+                    <p>I'm currently open to new opportunities.</p>
+                    <p>Email: <a href="mailto:akapadia975@gmail.com" class="text-link">akapadia975@gmail.com</a></p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/abdullah-kapadia23/" target="_blank" class="text-link">linkedin.com/in/abdullah-kapadia23/</a></p>
+                    <p>GitHub: <a href="https://github.com/abdullahkapadia" target="_blank" class="text-link">github.com/abdullahkapadia</a></p>
+                </div>
             </div>
         </section>
 
-        <!-- Footer -->
-        <footer class="portfolio-footer">
-            <p>Designed & Built by Abdullah Kapadia &copy; 2024</p>
-        </footer>
+        <!-- Terminal Section -->
+        <section id="terminal" class="page-section">
+            <div class="terminal-container">
+                <div class="terminal-header">
+                    <span class="terminal-title">guest@abdullah-portfolio: ~</span>
+                </div>
+                <div class="terminal-body" id="terminalBody">
+                    <div class="terminal-line">Abdullah Kapadia Portfolio Terminal [Beta]</div>
+                    <div class="terminal-line">Type 'help' to see a list of available commands.</div>
+                    <div class="terminal-prompt-wrapper">
+                        <span class="prompt-text">guest@portfolio:~$</span>
+                        <input type="text" id="terminalInput" class="terminal-input" autocomplete="off" autofocus>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    </div>
+    </main>
 
-    <script src="js/main.js?v=1.0"></script>
+    <script src="js/main.js?v=2.0"></script>
 </body>
 </html>

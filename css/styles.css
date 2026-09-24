@@ -222,7 +222,6 @@ body {
     font-size: 3rem;
     font-weight: 300;
     margin-bottom: 3rem;
-    border-bottom: 1px solid var(--border-color);
     padding-bottom: 1rem;
 }
 
